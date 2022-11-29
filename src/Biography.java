@@ -62,7 +62,7 @@ public class Biography {
             scanner.nextLine();
              author = new Author(authorsFName, authorsLName, country, isAlive, age , books);
         }
-        else if (!isAlive) {
+        else  {
              author = new Author(authorsFName, authorsLName, country, isAlive, books);
         }
 
