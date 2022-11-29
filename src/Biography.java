@@ -53,16 +53,18 @@ public class Biography {
         System.out.println("Is your favorite author alive? Y/N");
         boolean isAlive = scanner.nextLine().equals("y");
 
+        List<Book> books = new ArrayList<>();
+
+        Author author = null;
         if (isAlive){
             System.out.println("How old is your favorite author?");
             int age = scanner.nextInt();
             scanner.nextLine();
-            Author author = new Author(authorsFName, authorsLName, country, isAlive, age);
+             author = new Author(authorsFName, authorsLName, country, isAlive, age , books);
         }
-        Author author = new Author(authorsFName, authorsLName, country, isAlive);
-
-        List<Book> books = new ArrayList<>();
-
+        else if (!isAlive) {
+             author = new Author(authorsFName, authorsLName, country, isAlive, books);
+        }
 
         do {
 
@@ -94,15 +96,5 @@ public class Biography {
         for (Book book : author.books) {
             System.out.println(book);
         }
-
-
-
-
-
-
-
-
-
-
     }
 }

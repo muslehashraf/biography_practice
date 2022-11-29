@@ -5,12 +5,12 @@ public class Author {
 
 
 
-    public Author(String firstName, String lastName, String country, boolean isAlive) {
+    public Author(String firstName, String lastName, String country, boolean isAlive, List<Book> books) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.country = country;
         this.isAlive = isAlive;
-        List<Book> books = new ArrayList<>();
+        this.books = books;
     }
 
     /**
@@ -21,13 +21,13 @@ public class Author {
 
     //Create 6 args custom constructor here
     //YOUR CODE HERE
-    public Author(String firstName, String lastName, String country, boolean isAlive, int age) {
+    public Author(String firstName, String lastName, String country, boolean isAlive, int age, List<Book> books) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.country = country;
         this.isAlive = isAlive;
         this.age = age;
-        List<Book> books = new ArrayList<>();
+        this.books = books;
     }
 
     /*
@@ -41,7 +41,7 @@ public class Author {
     public String country;
     public boolean isAlive;
     public int age;
-    public List<Book> books = new ArrayList<>();
+    public List<Book> books;
 
 
     /*
